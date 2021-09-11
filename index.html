@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        #hinhanh{
+             background-color: white; 
+            display:flex;
+            flex-direction:column;
+            width:100%;
+        }
+        img{
+            width: 200px; 
+            background-color: aliceblue;
+            position: relative; 
+            left: 0px;      
+        }
+        body{
+            width: 100%;
+            height: 100%;
+        }
+        #nut{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+        }
+        button{
+            margin-left: 5px;
+        }
+        audio{
+            display: none;
+        }
+        #themchu{
+            color:lightcoral;
+            font-size: 50px;
+            text-align:center;
+        }
+    </style>
+    <script>
+       
+        $(document).ready(function(){
+            function chaytiep(){
+                vachdich=1500;
+
+                pos_ngua= Math.floor(Math.random()*50);
+                pos_rua=    Math.floor(Math.random()*50);
+                pos_tho=    Math.floor(Math.random()*50);
+
+                nguaWin=parseInt($('#vitri_ngua').css("left"));
+                ruaWin=parseInt($('#vitri_rua').css("left"));
+                thoWin=parseInt($('#vitri_tho').css("left")); 
+
+                nguaWin+=pos_ngua;
+                ruaWin+=pos_rua;
+                thoWin+=pos_tho;   
+
+
+                $("#vitri_ngua").css("left",nguaWin);
+                $("#vitri_rua").css("left",ruaWin);
+                $("#vitri_tho").css("left",thoWin);
+                if(nguaWin>vachdich||ruaWin>vachdich||thoWin>vachdich) 
+                {
+                    clearInterval(dung);//phải gán biến cho setInterval mới dừng được
+                
+                if(nguaWin>thoWin&&nguaWin>ruaWin)
+                {
+                    var audio=document.getElementById("music1");
+                    audio.play();
+
+                    var themchu=document.createElement('h2');
+                    var chu=document.createTextNode("NGỰA WIN !!!!");
+                    themchu.appendChild(chu);
+                    document.getElementById('themchu').appendChild(themchu);
+                }
+                if(ruaWin>thoWin&&ruaWin>nguaWin)
+                {
+                    var audio=document.getElementById("music2");
+                    audio.play();
+                    
+                    var themchu=document.createElement('h2');
+                    var chu=document.createTextNode("CHÓ WIN !!!!");
+                    themchu.appendChild(chu);
+                    document.getElementById('themchu').appendChild(themchu);
+                }
+                if(thoWin>ruaWin&& thoWin>nguaWin)
+                {
+                    var audio=document.getElementById("music3");
+                    audio.play();
+
+                    var themchu=document.createElement('h2');
+                    var chu=document.createTextNode("GÀ WIN !!!!");
+                    themchu.appendChild(chu);
+                    document.getElementById('themchu').appendChild(themchu);
+                }
+            }
+            }
+            $("#play").click(function (){ 
+                dung =setInterval(chaytiep,100);      //phải gán biến nếu không thì không dừng đc   
+                var audio=document.getElementById("music");
+                   audio.volume =0.2;
+                    audio.play();
+                 $('#play').off('click');
+
+            })
+            $("#stop").click(function (){ 
+                clearInterval(dung);
+            })
+            $("#reset").click(function (){ 
+                location.reload();
+            })
+            })
+    </script>
+</head>
+<body>
+        <h1 style="text-align: center">CUỘC ĐUA KÌ THÚ</h1>
+        <div id="themchu"></div>
+        <div id="hinhanh">
+        <img id="vitri_ngua" src="ngựa.jpg">
+        <img  id="vitri_rua"src="rùa.jpg">
+        <img  id="vitri_tho"src="thỏ.jpg">
+        </div>
+        <div id="nut">
+        <button id="play">Play</button>
+        <button id="stop">Stop</button>
+        <button id ="reset">Reset</button>
+        </div>
+        <audio controls id="music1">
+            <source src="Crazy Horse Funny.mp3" type="audio/mp3">
+        </audio>
+        <audio controls id="music2">
+            <source src="who let the dogs out.mp3" type="audio/mp3">
+        </audio>
+        <audio controls id="music3">
+            <source src="Rap Chicken.mp3" type="audio/mp3">
+        </audio>
+    </audio>
+    <audio controls id="music">
+        <source src="Winner.mp3" type="audio/mp3">
+    </audio>
+</body>
+</html>
