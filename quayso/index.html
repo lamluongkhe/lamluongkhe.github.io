@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+        <div>
+            <div id="banner">
+                <span>TRÒ CHƠI QUAY SỐ</span>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="quayso.html">Trò chơi quay số</a></li>
+                    <li><a href="xucxac.html">Trò chơi quay xúc xắc</a></li>
+                </ul>
+            </div>
+            <div id='container'>
+                <div id="container1">
+                    <ul>
+                        <li>C#</li>
+                        <li>PHP & MYSQL</li>
+                        <li>XML</li>
+                        <li>JAVA</li>
+                        <li>SQLServer</li>
+                        <li>ASPNET</li>
+                        <li>ANDROID</li>
+                        <li>WINDOWS PHONE</li>
+                    </ul>
+                </div>
+                <div id="container2">
+                    <form name="dangky" onsubmit="return mua()" method="get">
+                        <table>
+                            <caption >ĐĂNG KÝ MUA HÀNG</caption>
+                        <tr>
+                            <td><label for="hoten">Họ tên:</label></td>
+                            <td><input type="text" name="hoten"  placeholder="Nguyễn Văn A"></td>
+                           </tr> 
+                        <tr>
+                            <td><label for="email">Email:</label></td>
+                            <td><input type="email" name="mail" placeholder="email@gmail.com"></td>
+                            </tr>
+                       <tr>
+                            <td><label for="soluong">Số lượng mua:</label></td>
+                            <td><input type="number" name="soluong" placeholder="number"></td>
+
+                        <tr>
+                            <td><label for="ngaynhan">Ngày nhận hàng:</label></td>
+                            <td><input type="date" name="ngaynhan"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="thanhtoan">Thanh toán: </label></td>
+                            <td><input type="radio" name="thanhtoan" value="chuyenkhoan">Chuyển khoản<input type="radio" name="thanhtoan" value="tructiep">Trực tiếp khi giao hàng</td>
+                        <tr>
+                            <td></td>
+                            <td> 
+                                <input id="dangky" type="submit" value="Đăng ký mua"><input type="reset" onclick="xoa()" value="Xoá">
+                            </td>
+                        </table>
+                        <div id="baoloi"></div>
+                    </form>
+                </div>
+                <div id="container3">
+                    <div>Vùng quảng cáo 1</div>
+                    <div>Vùng quảng cáo 2</div>
+                </div>
+            </div>
+            <div id='footer'>Bài thực hành Ứng dụng Web</div>
+        </div>
+</body>
+</html>

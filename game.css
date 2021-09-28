@@ -1,0 +1,61 @@
+*{
+    background-color:#07252d;
+
+}
+#banner{
+    width: 70%;
+    height: 500px;
+}
+#gamezone{
+    display: flex;
+    flex-direction: row;
+    background-color:#07252d;
+    padding-left: 5%;
+}
+#gamezone img{
+    width: 30%;
+    margin-left:20px;
+    margin-top: 10px;
+}
+#namegame{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size:30px;
+    position: relative;
+    background-color:#07252d;
+    
+}
+#namegame p{
+    text-transform: uppercase;
+    width: 100%;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0008);
+    line-height: 0.7em;
+    outline:none;
+    animation:animate 5s linear infinite;
+}
+@keyframes animate{
+    0%,18%, 20%,50.1%,60%,65.1%,80%,90.1%,92%
+    {
+        color:#0e3742;
+        box-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,80.1%,90%,92.1%,100%{
+        color:cyan;
+        box-shadow: 0 0 10px #03bcf4,
+         0 0 20px #03bcf4,
+         0 0 40px #03bcf4,
+         0 0 80px #03bcf4,
+         0 0 1600px #03bcf4,
+        
+    }
+}
+a{
+    width:100%;
+    padding-left: 4%;
+    text-decoration: none;
+}
+a:nth-child(3)
+{
+    padding-right: 5%;
+}

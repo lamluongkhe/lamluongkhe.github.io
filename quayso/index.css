@@ -1,0 +1,87 @@
+#banner{
+    text-align:center;
+    color: yellow;
+    font-size:x-large;
+    background-color:lightcoral;
+    width:100%;
+    height:80px;
+    padding-top: 30px;
+}
+#banner span:hover {
+    color: red;
+    font-size: xx-large;
+}
+#menu{
+    background-color:coral;
+    width: 100%;
+    height:30px;
+}
+#menu ul{
+    display: flex;
+    flex-direction:row;
+    list-style-type: none;
+    justify-content: center;
+}
+#menu ul li a{
+    text-decoration: none;
+    margin-left: 20px;
+    font-size:20px;
+    color: white;
+}
+#menu ul li a:hover{
+    color:lightgreen;
+    font-size:28px;
+}
+#container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+#container1{
+    background-color:crimson;
+    width:20%;
+    height:500px;
+    color:white;
+}
+#container1 ul li{
+    padding:10px;
+}
+#container2{
+    background-color:aqua;
+    width:60%;
+    height:auto;
+    margin-left: 5px;
+}
+#container2 label{
+    padding-right: 50px;
+}
+
+#container3{
+    background-color:crimson;
+    color:antiquewhite;
+    margin-left: 5px;
+    width:20%;
+    padding:5px;
+}
+#container3 div{
+    border: 1px solid white;
+    border-radius: 10%;
+    height: 150px;
+    background-color:blueviolet;
+    text-align: center;
+    margin-top: 5px;
+    padding:20px;
+}
+#footer{
+    text-align: center;
+    background-color: rgb(240, 74, 129);
+    color:darkgray;
+    margin-top: 5px;
+}
+caption{
+    font-size:25px;
+    margin-bottom: 10px;
+    left:60px;
+    position: relative;
+    color:crimson;
+}
