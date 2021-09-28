@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Zone</title>
+    <link href="game.css" rel="stylesheet">
+    <link href="responsive.css" rel="stylesheet">
+    <script>
+        window.onload = function(){
+            document.audio.play();
+        }
+    </script>
+</head>
+<body>
+    <div>
+            <audio autoplay="autoplay" loop="loop">
+                <source id='play' src="8bit.mp3" type="audio/mpeg">
+              </audio>
+            <div>
+                    <img id="banner" src="game.png" alt="banner game">
+            </div>
+            <div id="gamezone">
+                <img id="tro1" src="tictoctoe.jpg" alt="trò chơi caro">
+                <img id="tro2" src="race.jpg" alt="trò chơi đua thú">
+                <img id="tro3" src="dice.jpg" alt=" trò chơi quay số">
+            </div>
+            <div id="namegame">
+                <a href="caro/caro.html"><p id="tengame1">Tic Toc Toe</p></a>
+                <a href="duathu/duathu.html"><p id="tengame2">Animal Race</p></a>
+                <a href="quayso/index.html"><p id="tengame2"><p id="tengame3">Dice</p></a>
+            </div>
+          </div>
+</body>
+</html>
