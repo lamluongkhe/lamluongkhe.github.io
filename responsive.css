@@ -1,6 +1,7 @@
 @media screen and (max-width:46.1875em){
     #gamezone img{
         width:25%;
+        height:50px;
     }
     #namegame a p{
         font-size:7px;
