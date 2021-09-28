@@ -42,7 +42,12 @@
     <script>
        
         $(document).ready(function(){
-            function chaytiep(){
+       
+        var mo=false;
+        $("#play").click(function (){ 
+            if(mo==false)
+            {
+                function chaytiep(){
                 vachdich=1500;
 
                 pos_ngua= Math.floor(Math.random()*50);
@@ -56,7 +61,7 @@
                 nguaWin+=pos_ngua;
                 ruaWin+=pos_rua;
                 thoWin+=pos_tho;   
-
+           
 
                 $("#vitri_ngua").css("left",nguaWin);
                 $("#vitri_rua").css("left",ruaWin);
@@ -64,7 +69,7 @@
                 if(nguaWin>vachdich||ruaWin>vachdich||thoWin>vachdich) 
                 {
                     clearInterval(dung);//phải gán biến cho setInterval mới dừng được
-                
+                    $('#play').off('click');
                 if(nguaWin>thoWin&&nguaWin>ruaWin)
                 {
                     var audio=document.getElementById("music1");
@@ -89,25 +94,30 @@
                 {
                     var audio=document.getElementById("music3");
                     audio.play();
-
+                    
                     var themchu=document.createElement('h2');
                     var chu=document.createTextNode("GÀ WIN !!!!");
                     themchu.appendChild(chu);
                     document.getElementById('themchu').appendChild(themchu);
                 }
             }
-            }
-            $("#play").click(function (){ 
-                dung =setInterval(chaytiep,100);      //phải gán biến nếu không thì không dừng đc   
-                var audio=document.getElementById("music");
-                   audio.volume =0.2;
-                    audio.play();
-                 $('#play').off('click');
+        }
+        var audio=document.getElementById("music");
+        audio.volume =0.2;
+        audio.play();
+    
+        dung =setInterval(chaytiep,100);      //phải gán biến nếu không thì không dừng đc   
+        mo=true;
+    }
+    })
 
+             $("#stop").click(function (){ 
+                if(mo==true){
+                        mo=false;
+                        clearInterval(dung);
+                 }
             })
-            $("#stop").click(function (){ 
-                clearInterval(dung);
-            })
+        
             $("#reset").click(function (){ 
                 location.reload();
             })
