@@ -104,3 +104,35 @@ caption{
     font-size: 50px;
     margin-top: 10%;
 }
+@media screen and (max-width:46.1875em){
+#menu ul li a{
+       font-size:14px;
+    }
+    #menu ul li {
+        position: relative;
+        right:6%;
+     }
+    #container1{
+        width:20%;
+        font-size: 13px;
+        height:460px;
+    }
+    #container1 ul{
+        padding-left: 3%;
+    }
+    #container2 img{
+        width: 28%;
+        height: 70%;
+    }
+    #container2 button{
+        width: 35%;
+        position: relative;
+        left: 30%;
+    }
+    #container3 div{
+        height: 20%;
+    }
+    #container{
+        height:460px;
+    }
+}
